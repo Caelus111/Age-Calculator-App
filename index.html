@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body class="font-popin bg-offWhite">
+    <main class="flex items-center justify-center h-dvh">
+      <!-- flex container -->
+      <div
+        class="bg-white w-[90%] h-fit p-5 md:p-14 rounded-2xl rounded-br-[5em] shadow-md md:rounded-br-[15em] md:w-[840px] md:h-[640px]"
+      >
+        <!-- Form inputs -->
+        <form
+          novalidate
+          class="flex flex-row flex-wrap items-center justify-around my-5 space-x-1 md:justify-start md:items-start md:space-x-5 md:my-0"
+        >
+          <!-- Day -->
+          <div class="relative flex flex-col">
+            <label
+              class="font-bold text-smokeyGrey text-sm tracking-[3px] mb-1 uppercase"
+              for="day"
+              >day</label
+            >
+            <input
+              class="w-[90px] h-[50px] pl-2 font-bold text-2xl border focus:outline-none focus:ring-4 focus:ring-Purple caret-Purple focus:invalid:border-lightRed focus:invalid:ring-lightRed focus:invalid:caret-lightRed rounded-md md:text-3xl md:w-[160px] md:h-[70px] md:pl-4 peer"
+              type="number"
+              name="day"
+              id="day"
+              placeholder="DD"
+              required
+            />
+            <p
+              class="hidden absolute top-[100%] left-0 text-sm mt-1 text-lightRed italic error-message"
+            ></p>
+          </div>
+          <!-- Month -->
+          <div class="relative flex flex-col">
+            <label
+              class="font-bold text-smokeyGrey text-sm mb-1 tracking-[3px] uppercase"
+              for="month"
+              >month</label
+            >
+            <input
+              class="w-[90px] h-[50px] pl-2 font-bold text-2xl border caret-Purple focus:outline-none focus:ring-4 focus:ring-Purple focus:invalid:border-lightRed focus:invalid:ring-lightRed focus:invalid:caret-lightRed rounded-md md:text-3xl md:w-[160px] md:h-[70px] md:pl-4"
+              type="number"
+              name="month"
+              id="month"
+              placeholder="MM"
+              required
+            />
+            <p
+              class="hidden absolute top-[100%] left-0 text-sm text-lightRed italic mt-1 error-message"
+            ></p>
+          </div>
+          <!-- Year -->
+          <div class="relative flex flex-col">
+            <label
+              class="font-bold text-smokeyGrey text-sm mb-1 tracking-[3px] uppercase"
+              for="year"
+              >year</label
+            >
+            <input
+              class="w-[90px] h-[50px] pl-2 font-bold text-2xl border caret-Purple focus:outline-none focus:ring-4 focus:ring-Purple focus:invalid:border-lightRed focus:invalid:ring-lightRed focus:invalid:caret-lightRed rounded-md md:text-3xl md:w-[160px] md:h-[70px] md:pl-4"
+              type="number"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+              required
+            />
+            <p
+              class="hidden absolute top-[100%] left-0 text-sm text-lightRed italic mt-1 error-message"
+            ></p>
+          </div>
+          <!-- Break  -->
+          <div class="break"></div>
+          <!-- button -->
+          <div
+            class="flex items-center justify-center w-full my-3 md:justify-end"
+          >
+            <hr class="w-full" />
+            <button
+              id="btn"
+              class="p-5 bg-Purple rounded-full z-10 hover:bg-black transition-colors"
+              type="submit"
+            >
+              <img src="img/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+
+        <!-- Text Content -->
+        <div
+          class="font-extrabold leading-[1.1] text-6xl italic flex flex-col md:text-[6em]"
+        >
+          <!-- Years -->
+          <div class="output-year">
+            <span class="text-Purple"> - - </span>
+            years
+          </div>
+          <!-- Months -->
+          <div class="output-month">
+            <span class="text-Purple"> - - </span>
+            months
+          </div>
+          <!-- Days -->
+          <div class="output-day">
+            <span class="text-Purple"> - - </span>
+            days
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
