@@ -121,6 +121,7 @@ btn.addEventListener("click", () => {
     setError(dayInput, "Must be a valid date");
     setError(monthInput, "");
     setError(yearInput, "");
+    return
   }
 
   let ageYear = currentDay.getFullYear() - year;
